@@ -15,7 +15,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_befo
 
 global $USER;
 
-// Авторизация пользователя (администратора)
+// Выбор парвого пользователя входящего в группу администраторы
 $rsUser = $USER->GetList(
     "ID",
     "ASC",
@@ -28,8 +28,10 @@ $rsUser = $USER->GetList(
     )
 );
 
-if($arUser = $rsUser->Fetch())
+if($arUser = $rsUser->Fetch()) {
+    // Авторизация пользователя (администратора)
     $USER->Authorize($arUser['ID']);
+}
 
 // Удаляем файл после авторизации пользователя
 @unlink(__FILE__);
