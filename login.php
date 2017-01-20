@@ -17,8 +17,8 @@ global $USER;
 
 // Выбор парвого пользователя входящего в группу администраторы
 $rsUser = $USER->GetList(
-    ($by="ID"), 
-    ($order="ASC"),
+    ($by = "ID"), 
+    ($order = "ASC"),
     array(
         "GROUPS_ID" => array(1)
     ),
