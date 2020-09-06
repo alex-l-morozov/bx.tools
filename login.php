@@ -8,7 +8,7 @@ define("NO_KEEP_STATISTIC", "Y");
 define("NO_AGENT_STATISTIC","Y");
 // Битрикс24:
 // Отключение проверки прав на доступ к файлам и каталогам
-// define("NOT_CHECK_PERMISSIONS", true);
+define("NOT_CHECK_PERMISSIONS", true);
 
 // Подключение служебной части пролога
 require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_before.php');
@@ -40,5 +40,5 @@ if($arUser = $rsUser->Fetch()) {
 LocalRedirect("/bitrix/admin/");
 // Битрикс24:
 // Переадресовываем на корень
-// LocalRedirect("/");
+//LocalRedirect("/");
 ?>
