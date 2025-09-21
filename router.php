@@ -3,7 +3,7 @@ use Bitrix\Main\ModuleManager;
 use Bitrix\Main\Routing\RoutingConfigurator;
 
 $getRoutePaths = static function (): array {
-    $prefixes = ['mymodule'];
+    $prefixes = ['mymoduleprefix'];
     $routes = [];
 
     foreach (ModuleManager::getInstalledModules() as $module) {
